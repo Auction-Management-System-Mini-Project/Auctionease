@@ -13,9 +13,6 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(express.json());
 
-// Routes
-// Define your routes here
-
 // Connect to MongoDB
 mongoose.connect(process.env.MONGODB_URI, {
   useNewUrlParser: true,
@@ -28,5 +25,5 @@ mongoose.connect(process.env.MONGODB_URI, {
     });
   })
   .catch((error) => {
-    console.error('MongoDB connection error:', error.message);
+    console.error('Error connecting to MongoDB:', error.message);
   });
